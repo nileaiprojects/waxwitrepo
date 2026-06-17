@@ -1,0 +1,18 @@
+# Raw, unoptimized downloads from Google Drive (regenerate via scripts/build-media.mjs)
+assets/_raw/
+
+# Python venv used only for gdown
+scripts/.venv/
+
+# Logs
+scripts/*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+node_modules/
+
+# NOTE: assets/videos/ and assets/posters/ ARE committed so the site is self-contained.
+# They total a few hundred MB. If the repo gets heavy, consider Git LFS:
+#   git lfs install && git lfs track "assets/videos/*.mp4"
+# or host the videos on a CDN and point js/data.js at the CDN URLs.

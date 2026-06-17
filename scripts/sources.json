@@ -1,0 +1,126 @@
+{
+  "_note": "Extracted from https://sites.google.com/view/zuhaibimtiaz/portfolio via Google Sites data-embed-doc-id attributes. driveId = Google Drive file ID. ratioHint is a guess; real dimensions are measured by ffprobe during optimize.",
+  "categories": [
+    {
+      "slug": "sapna-choudhary",
+      "name": "Sapna Choudhary",
+      "ratioHint": "portrait",
+      "items": [
+        { "title": "Google reel", "file": "google-reel", "driveId": "1Gml5abUCPqlr2RQ7XOGo384xnqB9FrRm" },
+        { "title": "Gym reel", "file": "gym-reel", "driveId": "1T2SvKxsHcgnSw9vcRnHZX5tsOovGYL86" },
+        { "title": "Meme reaction", "file": "meme-reaction", "driveId": "1RmbpDp-ymYUxE4oC2Nxqow0ozcA2Kxsq" },
+        { "title": "Three things", "file": "three-things", "driveId": "1wKmYmfF1LB-siw02tQ9IATY6Qhhitl1M" }
+      ]
+    },
+    {
+      "slug": "plasmapen",
+      "name": "Plasmapen by Louise Walsh",
+      "ratioHint": "portrait",
+      "items": [
+        { "title": "CEO life — Plasmapen & Cooljet", "file": "plasmapen-ceo-life", "driveId": "1Qz7-rqc-VswIYufLFMhmTAlhORq93aKx" },
+        { "title": "Product ad", "file": "plasmapen-ad-3", "driveId": "1NyZddvXi5_C9VE308h6rNvFXQYIg0pNF" },
+        { "title": "Sweden launch", "file": "plasmapen-sweden", "driveId": "1BJqsuObgzEKU3Of_EgyZmCrs0lI0NP9e" },
+        { "title": "Brand ad", "file": "plasmapen-ad-1", "driveId": "1yOvybEmxLsnFwcaXz-griz1Tcd5cBH2d" }
+      ]
+    },
+    {
+      "slug": "fashion-brands",
+      "name": "Fashion Brands",
+      "ratioHint": "portrait",
+      "items": [
+        { "title": "Bluweea II", "file": "bluweea-2", "driveId": "1UaRU1FkijEr8GxurwRMxWUotvWsXZcb7" },
+        { "title": "Add to Cart", "file": "add-to-cart", "driveId": "1Br2evJV2spp3bfiLudnPNZRziicXhC1T" },
+        { "title": "Beatnik", "file": "beatnik", "driveId": "1x3F88AG3d878m6ZLDeTxkzrf7h2-pRQk" },
+        { "title": "Snneha Jethwa II", "file": "snneha-jethwa-2", "driveId": "1nOuzJNjVA6kJO3nNfE8Nkm3J9v0DfbAO" },
+        { "title": "Bluweea", "file": "bluweea", "driveId": "1kFiASv4_7hNGQHh8Cgcp3OYSuHXc3jl6" },
+        { "title": "Peppinos", "file": "peppinos", "driveId": "1x75JkiSnBTBEHqZkSonWPUZOgO6eyisx" },
+        { "title": "Beatnik II", "file": "beatnik-2", "driveId": "1761BohvHvp_1t8_3aeTWqnwXhupslRX-" },
+        { "title": "Snneha Jethwa", "file": "snneha-jethwa", "driveId": "1k7aBK3mUGhCcx293unXpL5f4GhD07PKN" }
+      ]
+    },
+    {
+      "slug": "personal-branding",
+      "name": "Personal Branding",
+      "ratioHint": "portrait",
+      "items": [
+        { "title": "Performance Marketing", "file": "pb-performance-marketing", "driveId": "1SEcvzcqm1GSupgBDpTacMlfqEbSJwO8y" },
+        { "title": "Nutrition", "file": "pb-nutrition", "driveId": "18NUGkdAFJ59iXWob5nwGMKlEFscmWt41" },
+        { "title": "Design", "file": "pb-design", "driveId": "1wlcWdWtT4hYM8_gC21racwiN01U-0kxq" },
+        { "title": "Nature", "file": "pb-nature", "driveId": "11y4H50sEu6MIzxEJ88WI3k4TpYOSVdUx" }
+      ]
+    },
+    {
+      "slug": "interior-brands",
+      "name": "Interior Brands",
+      "ratioHint": "portrait",
+      "items": [
+        { "title": "Rebuzz", "file": "rebuzz", "driveId": "1rDAzBSC00S5uwMsCNX4-jGV833Bd9It2" },
+        { "title": "Agashe", "file": "agashe", "driveId": "1VZvifCMvEBO4fBWjFnlBVM9BjPM1nyY-" },
+        { "title": "Arterior", "file": "arterior", "driveId": "1dIyO-9_1XISYl-IJxU_lw0l90Pmtfky7" },
+        { "title": "Agashe II", "file": "agashe-2", "driveId": "1thsMGErFBIC2vjIbXSMQsBxep74zOftq" }
+      ]
+    },
+    {
+      "slug": "food-bakery",
+      "name": "Food & Bakery",
+      "ratioHint": "portrait",
+      "items": [
+        { "title": "Kokos", "file": "kokos", "driveId": "1wDziV_nG6x6f1nzINfI_K8l2is_MQqCF" },
+        { "title": "Xtraordinary", "file": "xtraordinary", "driveId": "1VRYwvLwRHAmPBJn9J0Z96WVCrrYNt4Ka" },
+        { "title": "Tribbiani Pizzeria", "file": "tribbiani-1", "driveId": "1EQ1s9uTLEVcJgw3IUaHhf3a5See_kQQv" },
+        { "title": "Kokos II", "file": "kokos-2", "driveId": "1ja814n55dJAPNdAkiqcVWfy_GURaqMZk" },
+        { "title": "Xtraordinary II", "file": "xtraordinary-2", "driveId": "1TnzmyKvAU8Jd-Ef3NYZWwwLKMf7h7zI_" },
+        { "title": "Tribbiani Pizzeria II", "file": "tribbiani-2", "driveId": "19b4DEOnQp0uO25HXq3kdKSl9X6Zfp62F" }
+      ]
+    },
+    {
+      "slug": "hotel-restaurants",
+      "name": "Hotel & Restaurants",
+      "ratioHint": "portrait",
+      "items": [
+        { "title": "Halloween Reel", "file": "halloween", "driveId": "10wijGPHmQHt4-EB_RsYlWgvS-HPoCFYK" },
+        { "title": "Hotel Harmony", "file": "hotel-harmony", "driveId": "1aTuO97hHHEIN-mSgMs1W8suH-FmtZF03" },
+        { "title": "Barrel", "file": "barrel", "driveId": "102plIryx6BZI_B1NKxgMz2BedkQ5hrk5" },
+        { "title": "Park Inn by Radisson", "file": "park-inn-radisson", "driveId": "1DmHTT4_lpPgE9KQsJkqv3_oNNMCf95LN" }
+      ]
+    },
+    {
+      "slug": "typography",
+      "name": "Typography Reels",
+      "ratioHint": "portrait",
+      "items": [
+        { "title": "Lead Physician", "file": "lead-physician", "driveId": "1hvQFOSXFG1z76nuEbkJjjxBCmqlWJj58" },
+        { "title": "SN Capital", "file": "sn-capital", "driveId": "1ZTpO0ThEgPPkyWW_hC2gpMw3JsY-jptQ" },
+        { "title": "Nile Technologies", "file": "nile-technologies", "driveId": "1FMVq5_uXunWPfzbDtcTDc0q5O2lfIgrS" },
+        { "title": "Care Exchange", "file": "care-exchange", "driveId": "1e-HaycSnJJU-Z5iufNiLU7Xacw81UZfN" }
+      ]
+    },
+    {
+      "slug": "promotional",
+      "name": "Promotional Videos",
+      "ratioHint": "landscape",
+      "items": [
+        { "title": "HBX Group", "file": "hbx-group", "driveId": "1IvEQ3NGH1FeQ9wMapuXkJSqx_oSQsBVp" },
+        { "title": "Promo Video", "file": "promo-video", "driveId": "1G_4Vx0kqkIerTQLwvDjWPL-cU1MhR0-C" },
+        { "title": "Long Form Promo", "file": "long-promo", "driveId": "1f4-v_eLoqrOzjwaQvPD8Vzf2febZAd76" }
+      ]
+    },
+    {
+      "slug": "logo-animation",
+      "name": "Logo Animation & Design",
+      "ratioHint": "landscape",
+      "items": [
+        { "title": "Logo Animation", "file": "logo-main", "driveId": "1-LvMUdCBYMCNzyMV3PotcMYjsvuLwOS9" },
+        { "title": "Ink n Pixel", "file": "ink-n-pixel", "driveId": "1NmMvBd1J2CwFQc26uyqGgqIb4mdCztKi" },
+        { "title": "Logo Reveal", "file": "logo-reveal", "driveId": "1DKU9AnHDoPlDaARDp1fa0xelepYtehkz" },
+        { "title": "Final Render", "file": "final-render", "driveId": "14Ko43L0j1gZWt-7VqF4O4BBtE2f52x5W" },
+        { "title": "Logo Animation II", "file": "logo-animation-2", "driveId": "1_6OOxGKUy8G693DYL8rFTCJ7R0irl6qm" },
+        { "title": "Logo Reveal II", "file": "logo-new", "driveId": "1T2ZAvbmy3Kdl1-SM_SGnLa7C22B-_7tB" },
+        { "title": "Tech Adisa", "file": "tech-adisa", "driveId": "13kSSoJwLHQ8HOUKXtcHtwuv6ypyPBC3A" },
+        { "title": "Tribbiani Logo", "file": "tribbiani-logo", "driveId": "1c21rR9FzEc5cYPrhAM7EaAzpiW1YKbuW" },
+        { "title": "Barrel Logo", "file": "barrel-logo", "driveId": "1dzgkZpsTAov5FmSsmatP9DdJga-QyN_D" },
+        { "title": "Digital 3D Logo Reveal (4K)", "file": "3d-logo-reveal-4k", "driveId": "1YSJOS5s-dc3gz00ZOGu7scCcp7co964Q" }
+      ]
+    }
+  ]
+}

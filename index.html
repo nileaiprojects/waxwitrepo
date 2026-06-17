@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waxwit — Digital Marketing Studio</title>
+  <meta name="description" content="Waxwit is a digital marketing studio crafting scroll-stopping reels, brand films, motion graphics and logo animation for ambitious brands." />
+  <meta name="theme-color" content="#a8806c" />
+
+  <!-- Open Graph (edit url/image when deployed) -->
+  <meta property="og:title" content="Waxwit — Digital Marketing Studio" />
+  <meta property="og:description" content="Scroll-stopping content for bold brands. Reels, brand films, motion graphics & logo animation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/brand/waxwit-logo.jpg" />
+
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/brand/waxwit-icon.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="header">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Waxwit — Digital Marketing Agency">
+        <img class="brand-logo" src="assets/brand/waxwit-wordmark-light.png" alt="Waxwit — Digital Marketing Agency" width="1000" height="380" />
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#clients">Clients</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <a class="btn btn-primary nav-cta" href="#contact">Start a project</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="container">
+        <span class="eyebrow reveal">Digital marketing studio</span>
+        <h1 class="hero-title">
+          <span class="line reveal" data-delay="1">Content that's</span>
+          <span class="line reveal grad-text" data-delay="2">impossible to</span>
+          <span class="line reveal" data-delay="3">scroll past.</span>
+        </h1>
+        <p class="hero-sub reveal" data-delay="3">
+          Waxwit plans, shoots, edits and animates scroll-stopping content for ambitious brands —
+          reels, brand films, motion graphics and logo animation that earn attention and drive results.
+        </p>
+        <div class="hero-actions reveal" data-delay="3">
+          <a class="btn btn-primary" href="#work">See our work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#contact">Start a project</a>
+        </div>
+
+        <!-- Stats — edit these numbers to your real figures -->
+        <div class="hero-stats reveal">
+          <div><div class="stat-num grad-text">50+</div><div class="stat-label">Reels & films delivered</div></div>
+          <div><div class="stat-num grad-text">20+</div><div class="stat-label">Brands served</div></div>
+          <div><div class="stat-num grad-text">10</div><div class="stat-label">Industries</div></div>
+          <div><div class="stat-num grad-text">4K</div><div class="stat-label">Finishing quality</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ticker strip -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What we do</span>
+          <h2>Full-stack content, <span class="grad-text">end to end.</span></h2>
+          <p>From the first idea to the final 4K export, we handle the craft so your brand shows up sharp,
+             consistent and unmistakably you.</p>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== WORK ===================== -->
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Selected work</span>
+          <h2>Projects we've <span class="grad-text">delivered.</span></h2>
+          <p>A selection of reels, films and animations produced by Waxwit for our clients.
+             Tap any tile to play.</p>
+        </div>
+        <div class="work-filters reveal" id="workFilters"></div>
+        <div class="work-grid" id="workGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CLIENTS ===================== -->
+    <section class="clients" id="clients">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Trusted by</span>
+          <h2>Brands we've <span class="grad-text">worked with.</span></h2>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="clientsA"></div></div>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" id="clientsB"></div></div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <span class="eyebrow">About Waxwit</span>
+          <h2 class="grad-text" style="font-family:var(--font-display);font-weight:700;font-size:clamp(30px,4.6vw,52px);line-height:1.05;letter-spacing:-0.02em;">
+            We make brands move.</h2>
+          <p>Waxwit is a digital marketing studio built for the scroll era. We turn raw ideas and footage
+             into content that helps brands get <strong>seen, remembered and chosen</strong>.</p>
+          <p>We've delivered for fashion labels, restaurants, hospitality groups, clinics, agencies and
+             personal brands — obsessing over pacing, sound and motion so your message lands in the
+             first three seconds.</p>
+          <p>Led by editor &amp; creative <strong>Zuhaib Imtiaz</strong>, every project is crafted to
+             perform, not just to look good.</p>
+        </div>
+        <aside class="about-card reveal" data-delay="1">
+          <div class="about-stats">
+            <div><div class="stat-num grad-text">10+</div><div class="stat-label">Content categories</div></div>
+            <div><div class="stat-num grad-text">50+</div><div class="stat-label">Projects shipped</div></div>
+            <div><div class="stat-num grad-text">100%</div><div class="stat-label">In-house edit & motion</div></div>
+            <div><div class="stat-num grad-text">3s</div><div class="stat-label">Hook-first mindset</div></div>
+          </div>
+          <ul class="about-values">
+            <li>Strategy-led concepts, not random clips</li>
+            <li>Scroll-native pacing & sound design</li>
+            <li>Fast turnarounds, broadcast-grade finish</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">Let's talk</span>
+          <h2>Have a project <span class="grad-text">in mind?</span></h2>
+          <p class="contact-lead">Tell us about your brand and what you want to create. We'll get back
+             within one business day.</p>
+
+          <div class="contact-methods">
+            <a class="contact-method" href="mailto:hello@waxwit.com">
+              <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span>
+              <span><b>hello@waxwit.com <em class="placeholder-flag">placeholder</em></b><span>Email us anytime</span></span>
+            </a>
+            <a class="contact-method" href="tel:+910000000000">
+              <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h4l2 5-3 2a14 14 0 006 6l2-3 5 2v4a2 2 0 01-2 2A18 18 0 014 6a2 2 0 010-2z" fill="currentColor"/></svg></span>
+              <span><b>+91 00000 00000 <em class="placeholder-flag">placeholder</em></b><span>Mon–Sat, 10am–7pm</span></span>
+            </a>
+            <a class="contact-method" href="https://www.linkedin.com/in/zuhaibimtiaz/" target="_blank" rel="noopener">
+              <span class="ico"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11.02 5 2.5 2.5 0 01-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.74 2.64 4.74 6.07V21H21v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.16 1.46-2.16 2.96V21H13z" fill="currentColor"/></svg></span>
+              <span><b>LinkedIn</b><span>linkedin.com/in/zuhaibimtiaz</span></span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" data-delay="1" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" placeholder="you@brand.com" required />
+          </div>
+          <div class="field">
+            <label for="cf-msg">What do you want to create?</label>
+            <textarea id="cf-msg" name="message" placeholder="Tell us about your brand, goals and timeline…" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-note">Demo form — wire up to email/Formspree before launch.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#home" class="brand">
+            <img class="brand-logo" src="assets/brand/waxwit-wordmark-light.png" alt="Waxwit — Digital Marketing Agency" width="1000" height="380" />
+          </a>
+          <p class="footer-blurb">Scroll-stopping content for bold brands. Reels, brand films, motion graphics &amp; logo animation.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+          </div>
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="mailto:hello@waxwit.com">Email</a>
+            <a href="https://www.linkedin.com/in/zuhaibimtiaz/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#contact">Start a project</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Waxwit. All rights reserved.</span>
+        <span>Made with bold ideas ✦</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="lightbox-inner" id="lightboxInner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      <video id="lightboxVideo" controls playsinline preload="auto"></video>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
