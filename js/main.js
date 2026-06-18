@@ -10,16 +10,15 @@
 
   /* Accent color per category slug (warm earth-tone brand palette) */
   const ACCENTS = {
-    "sapna-choudhary": "var(--clay)",
-    "plasmapen": "var(--rose)",
+    "faces-that-influence": "var(--clay)",
     "fashion-brands": "var(--ochre)",
-    "personal-branding": "var(--clay-3)",
     "interior-brands": "var(--olive)",
     "food-bakery": "var(--ochre)",
     "hotel-restaurants": "var(--rose)",
     "typography": "var(--clay-2)",
     "promotional": "var(--olive)",
     "logo-animation": "var(--clay-3)",
+    "built-for-paws": "var(--blush)",
   };
 
   /* Editorial content (edit freely) */
