@@ -24,19 +24,21 @@
 
   /* Editorial content (edit freely) */
   const SERVICES = [
-    { t: "Short-Form Reels & Social", d: "Scroll-stopping reels engineered for reach, saves and shares across Instagram, TikTok and YouTube Shorts.", tags: ["Reels", "TikTok", "Shorts"], accent: "var(--clay)" },
-    { t: "Brand & Product Films", d: "Story-driven brand and product videos that turn attention into demand and clicks into customers.", tags: ["Ads", "Product", "Campaigns"], accent: "var(--rose)" },
-    { t: "Personal Branding", d: "Founder-led content that builds authority, trust and a loyal audience around you.", tags: ["Founders", "Talking-head", "Authority"], accent: "var(--ochre)" },
-    { t: "Typography & Motion Graphics", d: "Kinetic type and motion design that make every frame pop and every message stick.", tags: ["Kinetic type", "Motion", "Animation"], accent: "var(--clay-2)" },
-    { t: "Logo Animation & 3D Reveals", d: "Signature logo stings and 3D reveals that make a brand instantly recognisable.", tags: ["Logo sting", "3D", "Reveals"], accent: "var(--olive)" },
-    { t: "Promotional & Corporate", d: "Polished promos and corporate films for launches, events, hospitality and beyond.", tags: ["Promo", "Corporate", "Events"], accent: "var(--clay-3)" },
+    { t: "Social Media Strategy", d: "A clear, channel-by-channel game plan built around your goals — not guesswork.", tags: ["Strategy", "Channels", "Growth"], accent: "var(--clay)" },
+    { t: "Content Planning & Calendars", d: "Always-on content mapped weeks ahead, so nothing's rushed and nothing's random.", tags: ["Calendars", "Planning", "Cadence"], accent: "var(--rose)" },
+    { t: "Reel & Video Scripting", d: "Hook-first scripts for reels and short video that earn attention in the first three seconds.", tags: ["Reels", "Scripts", "Hooks"], accent: "var(--ochre)" },
+    { t: "Campaign Concept & Ideation", d: "Big ideas with a purpose — campaign concepts that give your brand something to say.", tags: ["Campaigns", "Concepts", "Ideas"], accent: "var(--clay-2)" },
+    { t: "Paid Ads Strategy & Management", d: "Performance-led paid social that turns budget into reach, leads and sales.", tags: ["Paid social", "Performance", "ROI"], accent: "var(--olive)" },
+    { t: "White Label for Agencies", d: "Senior marketing overflow for agencies — your brand, our thinking, behind the scenes.", tags: ["Agencies", "Overflow", "White-label"], accent: "var(--clay-3)" },
+    { t: "Brand Identity & Positioning", d: "Sharp positioning and identity so your brand looks and sounds unmistakably you.", tags: ["Identity", "Positioning", "Brand"], accent: "var(--clay)" },
+    { t: "Reporting & Analytics", d: "Clear reporting that ties every post back to what actually moved the needle.", tags: ["Analytics", "Reporting", "Insights"], accent: "var(--rose)" },
   ];
 
   const CLIENTS = [
-    "Sapna Choudhary", "Plasmapen", "Louise Walsh", "Bluweea", "Beatnik", "Snneha Jethwa",
-    "Peppinos", "Rebuzz", "Agashe", "Arterior", "Kokos", "Xtraordinary", "Tribbiani Pizzeria",
-    "Hotel Harmony", "Park Inn by Radisson", "Lead Physician", "SN Capital",
-    "Nile Technologies", "Care Exchange", "HBX Group", "Ink n Pixel",
+    "Street Style Store", "Essilor Luxottica", "Sapna Choudhary", "Plasmapen", "Louise Walsh",
+    "Bluweea", "Beatnik", "Snneha Jethwa", "Peppinos", "Rebuzz", "Agashe", "Arterior", "Kokos",
+    "Xtraordinary", "Tribbiani Pizzeria", "Hotel Harmony", "Park Inn by Radisson", "Lead Physician",
+    "SN Capital", "Nile Technologies", "Care Exchange", "HBX Group", "Ink n Pixel",
   ];
 
   const $ = (s, c = document) => c.querySelector(s);
@@ -75,7 +77,7 @@
   });
 
   /* ---------- Ticker ---------- */
-  const tickerWords = ["Reels", "Brand Films", "Motion Graphics", "Logo Animation", "Personal Branding", "Promos", "3D Reveals", "Social Content"];
+  const tickerWords = ["Social Media Strategy", "Campaigns", "Reels", "Carousels", "Paid Ads", "Brand Identity", "Content Planning", "Analytics"];
   const tickerTrack = $("#tickerTrack");
   if (tickerTrack) {
     const build = () => tickerWords.forEach((w) => { const s = el("span"); s.textContent = w; tickerTrack.appendChild(s); });
@@ -183,14 +185,31 @@
 
   const form = $("#contactForm");
   if (form) {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
       const btn = $("button[type=submit]", form);
-      btn.textContent = "Thanks — we'll be in touch ✦";
+      const original = btn.textContent;
+      btn.textContent = "Sending…";
       btn.disabled = true;
-      form.reset();
-      setTimeout(() => { btn.textContent = "Send message"; btn.disabled = false; }, 3500);
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.success) {
+          btn.textContent = "Thanks — we'll be in touch ✦";
+          form.reset();
+          setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 4000);
+        } else {
+          throw new Error(data.message || "Submission failed");
+        }
+      } catch (err) {
+        btn.textContent = "Something went wrong — email us instead";
+        setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 4500);
+      }
     });
   }
 })();

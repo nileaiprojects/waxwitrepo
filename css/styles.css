@@ -270,6 +270,23 @@ section { padding: clamp(64px, 9vw, 130px) 0; }
 .about-values li { list-style: none; display: flex; gap: 12px; align-items: flex-start; color: rgba(251, 246, 241, 0.9); font-size: 15px; }
 .about-values li::before { content: "✦"; color: var(--blush); }
 
+/* Meet the founder */
+.founder {
+  margin-top: clamp(44px, 6vw, 76px);
+  border-top: 1px solid var(--line);
+  padding-top: clamp(36px, 5vw, 60px);
+  display: grid; grid-template-columns: 300px 1fr; gap: clamp(28px, 4vw, 56px); align-items: start;
+}
+.founder-photo {
+  width: 100%; max-width: 300px; height: 380px; object-fit: cover; object-position: center 20%;
+  border-radius: var(--radius-lg); border: 1px solid var(--line);
+  box-shadow: 0 26px 52px -26px rgba(44, 35, 32, 0.55);
+}
+.founder-bio h3 { font-family: var(--font-display); font-weight: 600; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.1; margin-top: 4px; }
+.founder-role { font-family: var(--font-display); font-style: italic; color: var(--clay); font-size: 17px; margin-top: 2px; }
+.founder-bio p:not(.founder-role) { color: var(--muted); font-size: clamp(15.5px, 1.6vw, 18px); margin-top: 16px; }
+.founder-bio p strong { color: var(--text); font-weight: 600; }
+
 /* ---------- Contact ---------- */
 .contact h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(36px, 5.6vw, 66px); line-height: 1.04; letter-spacing: -0.01em; }
 .contact-lead { color: var(--muted); margin-top: 22px; font-size: 18px; max-width: 44ch; }
@@ -353,6 +370,8 @@ section { padding: clamp(64px, 9vw, 130px) 0; }
   .work-card.landscape { grid-column: span 2; }
   .contact-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
+  .founder { grid-template-columns: 1fr; gap: 24px; }
+  .founder-photo { max-width: 260px; height: 320px; }
 }
 @media (max-width: 420px) { .container { padding: 0 18px; } }
 
