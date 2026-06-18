@@ -44,8 +44,32 @@ for (const it of items) {
   const outPath = `${VIDS}/${it.base}.mp4`;
   const posterPath = `${POSTERS}/${it.base}.jpg`;
 
+  // 0. local / no-driveId items (e.g. videos uploaded & watermarked locally):
+  //    reuse the already-optimized, committed output if present; else fall back
+  //    to a local source file (it.localSrc). Drive-backed items are unaffected.
+  if (!it.driveId) {
+    if (fs.existsSync(outPath) && fs.statSync(outPath).size > 10000) {
+      const fdim = probe(outPath) || { w: 0, h: 0 };
+      if (!fs.existsSync(posterPath)) {
+        try { execSync(`ffmpeg -y -loglevel error -ss 1 -i "${outPath}" -frames:v 1 -q:v 4 "${posterPath}"`, { stdio: 'inherit' }); }
+        catch { execSync(`ffmpeg -y -loglevel error -i "${outPath}" -frames:v 1 -q:v 4 "${posterPath}"`, { stdio: 'inherit' }); }
+      }
+      console.log(`${tag} local/reuse existing -> ${fdim.w}x${fdim.h}`);
+      manifest.push({
+        category: it.catSlug, categoryName: it.catName, title: it.title,
+        video: outPath, poster: posterPath,
+        w: fdim.w, h: fdim.h, orientation: fdim.h >= fdim.w ? 'portrait' : 'landscape',
+      });
+      continue;
+    }
+    if (it.localSrc && fs.existsSync(it.localSrc) && (!fs.existsSync(rawPath) || fs.statSync(rawPath).size < 50000)) {
+      fs.copyFileSync(it.localSrc, rawPath);
+    }
+  }
+
   // 1. download (skip if already a valid-sized raw)
   if (!fs.existsSync(rawPath) || fs.statSync(rawPath).size < 50000) {
+    if (!it.driveId) { console.error(`${tag} no driveId, local source, or existing output`); failed.push({ ...it, reason: 'no-source' }); continue; }
     console.log(`${tag} downloading ${it.driveId}`);
     try {
       execFileSync(GDOWN, ['--no-cookies', '--quiet', '-O', rawPath,
